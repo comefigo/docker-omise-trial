@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+  omise_trial:
+    image: nginx
+    container_name: omise_trial
+    ports:
+      - 80:80
+    volumes:
+      - ./htdocs:/usr/share/nginx/html:ro
+    environment:
+      - TZ=Tokyo/Asia
